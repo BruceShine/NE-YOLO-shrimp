@@ -1,0 +1,44 @@
+genotype_config:
+  {
+    init_genotype: ./genotypes/genotype2c.yaml,
+    genotype_number_init: 25,
+    genotype_number_limit: 50,
+    default_fitness: 0.0,
+    input_size: [3, 1000, 1000],
+    backbone_cell_types: [Conv, C3],
+    head_cell_types: [Conv, C3],
+    conv_out_channels: 32,
+    c3_out_channels: 32,
+  }
+
+
+species_config:
+  {
+    species_number_limit: 25,
+    compatibility_threshold: 1.0,
+    distance_coefficient: 1.0,
+  }
+
+
+search_config:
+  {
+    output_file: yolo_0323.txt,
+    generation_limit: 100,
+    length_limit: 21,
+    organization_prob: [60, 40],
+    add_cell_prob: 50,
+    modify_cell_prob: 100,
+    crossover_prob: 25,
+    attribution_prob: [60, 30, 10],
+  }
+
+train_config:
+  {
+    fitness_threshold:  0.85,
+    final_fitness_threshold: 0.92,
+  }
+
+
+
+
+
